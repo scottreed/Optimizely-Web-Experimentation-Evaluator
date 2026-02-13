@@ -1,0 +1,4 @@
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net10.0\OptimizelyIntegration.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net10.0\OptimizelyIntegration.Core.AssemblyInfoInputs.cache
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net10.0\OptimizelyIntegration.Core.AssemblyInfo.cs
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net10.0\OptimizelyIntegration.Core.csproj.CoreCompileInputs.cache

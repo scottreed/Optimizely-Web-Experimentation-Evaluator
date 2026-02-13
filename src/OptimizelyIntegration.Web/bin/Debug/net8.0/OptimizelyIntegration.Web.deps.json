@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "OptimizelyIntegration.Web/1.0.0": {
+        "dependencies": {
+          "OptimizelyIntegration.Core": "1.0.0"
+        },
+        "runtime": {
+          "OptimizelyIntegration.Web.dll": {}
+        }
+      },
+      "OptimizelyIntegration.Core/1.0.0": {
+        "runtime": {
+          "OptimizelyIntegration.Core.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "OptimizelyIntegration.Web/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "OptimizelyIntegration.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

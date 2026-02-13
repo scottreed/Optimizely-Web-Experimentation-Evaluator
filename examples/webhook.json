@@ -1,0 +1,10 @@
+{
+    "project_id": 12345678,
+    "timestamp": 1707645113,
+    "event": "project.snippet_updated",
+    "data": {
+        "revision": 105,
+        "origin_url": "https://optimizely.s3.amazonaws.com/js/12345678.js",
+        "cdn_url": "https://cdn.optimizely.com/js/12345678.js"
+    }
+}

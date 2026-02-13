@@ -1,0 +1,11 @@
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\bin\Debug\net8.0\OptimizelyIntegration.Core.deps.json
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\bin\Debug\net8.0\OptimizelyIntegration.Core.dll
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\bin\Debug\net8.0\OptimizelyIntegration.Core.pdb
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net8.0\OptimizelyIntegration.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net8.0\OptimizelyIntegration.Core.AssemblyInfoInputs.cache
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net8.0\OptimizelyIntegration.Core.AssemblyInfo.cs
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net8.0\OptimizelyIntegration.Core.csproj.CoreCompileInputs.cache
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net8.0\OptimizelyIntegration.Core.dll
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net8.0\refint\OptimizelyIntegration.Core.dll
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net8.0\OptimizelyIntegration.Core.pdb
+C:\Development\Projects\WebExApi\src\OptimizelyIntegration.Core\obj\Debug\net8.0\ref\OptimizelyIntegration.Core.dll

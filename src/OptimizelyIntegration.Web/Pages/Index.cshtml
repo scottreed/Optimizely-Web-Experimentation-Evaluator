@@ -1,0 +1,101 @@
+﻿@page
+@using OptimizelyIntegration.Core.Models
+@model IndexModel
+@{
+    ViewData["Title"] = "Optimizely Experiments";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Optimizely Project Experiments</h1>
+    <p>Enter a Project ID to retrieve active experiments.</p>
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <form method="get">
+            <div class="input-group mb-3">
+                <input type="number" class="form-control" asp-for="ProjectId" placeholder="Project ID" required>
+                <input type="text" class="form-control" asp-for="Subpath" placeholder="Subpath 1 (e.g. /blog/)" aria-label="Subpath">
+                <input type="text" class="form-control" asp-for="Subpath2" placeholder="Subpath 2 (optional)" aria-label="Subpath 2">
+                <div class="input-group-text">
+                    <input class="form-check-input mt-0" type="checkbox" asp-for="IncludeNoTargeting" aria-label="Include experiments with no targeting">
+                    <span class="ms-2">Include No Targeting</span>
+                </div>
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row justify-content-center mb-4">
+    <div class="col-md-6 text-center">
+        <form method="post" asp-page-handler="Refresh">
+            <input type="hidden" asp-for="ProjectId" />
+            <input type="hidden" asp-for="Subpath" />
+            <input type="hidden" asp-for="Subpath2" />
+            <input type="hidden" asp-for="IncludeNoTargeting" />
+            <button type="submit" class="btn btn-secondary">Refresh Data (Clear Cache)</button>
+        </form>
+    </div>
+</div>
+
+@if (!string.IsNullOrEmpty(Model.ErrorMessage))
+{
+    <div class="alert alert-danger" role="alert">
+        @Model.ErrorMessage
+    </div>
+}
+
+@if (Model.Experiments != null)
+{
+    if (Model.Experiments.Count == 0)
+    {
+        <div class="alert alert-info" role="alert">
+            No active experiments found for this project.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+        @foreach (var experiment in Model.Experiments)
+        {
+            <div class="col-md-12 mb-4">
+                <div class="card h-100">
+                    <div class="card-header d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0">@experiment.Name</h5>
+                        <span class="badge bg-success">@experiment.Status</span>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text"><strong>ID:</strong> @experiment.Id</p>
+                        @if (!string.IsNullOrEmpty(experiment.Description))
+                        {
+                            <p class="card-text">@experiment.Description</p>
+                        }
+                        
+                        @if (experiment.UrlTargeting != null)
+                        {
+                            <h6 class="mt-3">URL Targeting</h6>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">
+                                    <strong>Activation Type:</strong> @experiment.UrlTargeting.ActivationType
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Edit URL:</strong> <a href="@experiment.UrlTargeting.EditUrl" target="_blank">@experiment.UrlTargeting.EditUrl</a>
+                                </li>
+                                <li class="list-group-item">
+                                    <strong>Conditions (Raw):</strong>
+                                    <pre class="bg-light p-2 mt-2">@experiment.UrlTargeting.Conditions</pre>
+                                </li>
+                            </ul>
+                        }
+                        else
+                        {
+                            <p class="text-muted">No URL targeting information available.</p>
+                        }
+                    </div>
+                </div>
+            </div>
+        }
+        </div>
+    }
+}
