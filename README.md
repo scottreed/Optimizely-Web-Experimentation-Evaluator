@@ -33,5 +33,6 @@ The project has the following features
 - Run the project
 - In the UI set your project ID and the root URL and subpath.
 - Check the checkbox to match any non url matching experiments
+- Note that the status flag is currently set to also return archived projects for testing, but in a real-world scenario this should be changed to running and active. 
 
 
