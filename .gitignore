@@ -1,2 +1,24 @@
+## IDEs
 /.vs
-/vscode
+/.vscode
+*.user
+*.suo
+
+## .NET Build
+bin/
+obj/
+publish/
+out/
+
+## NuGet
+*.nupkg
+**/packages/
+project.lock.json
+project.fragment.lock.json
+
+## User secrets
+appsettings.*.local.json
+
+## OS
+.DS_Store
+Thumbs.db
